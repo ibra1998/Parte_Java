@@ -14,7 +14,7 @@ public class User {
 	private Date recordDate;
 
 	//We need a constructor that doesn't require a date, as it uses the current date
-	User(String name, String surname, String password) throws EmptyFieldException{
+	public User(String name, String surname, String password) throws EmptyFieldException{
 		if (name.equals("")) {
 			throw new EmptyFieldException("El campo nombre no puede estar vacio");
 		}
@@ -30,10 +30,10 @@ public class User {
 		this.recordDate = new Date();
 	 }
 	//We need getters for every attribute
-	String getName() {
+	public String getName() {
 		return this.name;
 	}
-	String getSurname() {
+	public String getSurname() {
 		return this.surname;
 	}
 	/*
@@ -42,15 +42,15 @@ public class User {
 		return this.password;
 	}
 	*/
-	Date getDate() {
+	public Date getDate() {
 		return this.recordDate;
 	}
 	
 	//Setters
-	void setName(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
-	void setSurname(String surname) {
+	public void setSurname(String surname) {
 		this.surname = surname;
 	}
 	/*
@@ -58,14 +58,14 @@ public class User {
 	void setPassword(String password) {
 		this.password = password;
 	}*/
-	void setDate(int Day, int Year, int Month) {
+	public void setDate(int Day, int Year, int Month) {
 		GregorianCalendar newDate = new GregorianCalendar(Year, Month, Day);
 		this.recordDate = newDate.getTime();
 		
 	}
 
 	//The user must be able to create new videos
-	void addVideos(String url, String title, ArrayList<String> tags) {
+	public void addVideos(String url, String title, ArrayList<String> tags) {
 		try {
 			this.videosList.add(new Video(url, title, tags));
 		}catch(EmptyFieldException e) {
@@ -74,12 +74,12 @@ public class User {
 		
 	}
 	//We need a method that checks if the password is correct
-	Boolean checkPassword(String password) {
+	public Boolean checkPassword(String password) {
 		return (this.password.equals(password));
 	}
 	
 	//The user must be able to see the videos he has
-	void showVideos() {
+	public void showVideos() {
 		for (Video video: videosList) {
 			System.out.println(video.getTitle() + " " + " url: " + video.getUrl() + " tags ");
 			for (String tag: video.getTags()) {
@@ -88,7 +88,7 @@ public class User {
 		}
 	}
 	//We need a method that modifies a user
-	void manipulateUser(Scanner reader) throws Exception {
+	public void manipulateUser(Scanner reader) throws Exception {
 		int choice;
 		do {
 			System.out.println("Qué desea hacer con este usuario: \n 1: Cambiar nombre\n 2: Cambiar apellidos\n "

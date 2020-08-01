@@ -12,7 +12,7 @@ public class Video {
 	private ArrayList<String> tags = new ArrayList<String>();
 	
 	//I create a constructor
-	Video(String url, String title, ArrayList<String> tags) throws EmptyFieldException{
+	public Video(String url, String title, ArrayList<String> tags) throws EmptyFieldException{
 		
 		//I check that no field is empty
 		if (url.equals("")) {
@@ -32,7 +32,7 @@ public class Video {
 	}
 	
 	//Maybe when we make the video, we don't want any tag, so we need another kind of constructor
-	Video(String url, String title) throws Exception{
+	public Video(String url, String title) throws Exception{
 		
 		//We check that no field is empty
 		if (url.equals("")) {
@@ -48,35 +48,35 @@ public class Video {
 	}
 	
 	//I create a getter for every attribute we have;
-	String getUrl() {
+	public String getUrl() {
 		return this.url;
 	}
-	ArrayList<String> getTags() {
+	public ArrayList<String> getTags() {
 		return this.tags;
 	}
-	String getTitle() {
+	public String getTitle() {
 		return this.title;
 	}
 	
 	//I create setters for every attribute
-	void setUrl(String url) {
+	public void setUrl(String url) {
 		this.url = url;
 	}
-	void setTitle(String title) {
+	public void setTitle(String title) {
 		this.title = title;
 	}
-	void setTags(ArrayList<String> tags) {
+	public void setTags(ArrayList<String> tags) {
 		this.tags = tags;
 	}
 	
 	//As tags is an ArrayList, we may want to add or eliminate a tag
-	void addTag(String tag) {
+	public void addTag(String tag) {
 		this.tags.add(tag);
 	}
-	void eliminateTag(String tag) {
+	public void eliminateTag(String tag) {
 		this.tags.remove(tag);
 	}
-	String tagsToString() {
+	public String tagsToString() {
 		String stringOfTags ="";
 		for (String tag: tags) {
 			stringOfTags += "# " + tag+ " ";
@@ -84,7 +84,7 @@ public class Video {
 		return stringOfTags;
 	}
 	//We want a method that manipulates our videos
-	void manipulateVideo(Scanner reader) throws EmptyFieldException {
+	public void manipulateVideo(Scanner reader) throws EmptyFieldException {
 		int choice;
 		do {
 			System.out.println("¿Qué vídeo desea hacer? \n 1: cambiar título, \n 2: cambiar url \n 3 añadir tags "
