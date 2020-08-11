@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.util.Calendar"/>
 <fullyQualifiedTypeName name="java.util.GregorianCalendar"/>
 <fullyQualifiedTypeName name="errores.EmptyFieldException"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="videos.User"/>
+<fullyQualifiedTypeName name="com.jobs.domain.Volunteer"/>
+<fullyQualifiedTypeName name="com.jobs.domain.AbsStaffMember"/>
+<fullyQualifiedTypeName name="com.jobs.application.PaymentFactory"/>
+<fullyQualifiedTypeName name="com.jobs.domain.NormalEmployee"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
